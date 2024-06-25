@@ -1,1 +1,2 @@
-# This project contains the source files for the R package _rdple_. 
+# This project contains the code for the R package _rdple_.
+
