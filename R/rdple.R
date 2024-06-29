@@ -1,3 +1,17 @@
+#' Title
+#'
+#' @param y A numeric vector.
+#' @param x A numeric vector.
+#' @param c A number.
+#' @param h A number or a character string.
+#' @param degree A number.
+#' @param kernel A character string.
+#' @param sparse.adj A character string.
+#' @param sparse.r A number.
+#'
+#' @return A list.
+#' @import stats
+#'
 rdple <- function(y, x, c, h="ska", degree=1, kernel="epanechnikov",
                      sparse.adj=FALSE, sparse.r=1){
 
@@ -39,7 +53,7 @@ rdple <- function(y, x, c, h="ska", degree=1, kernel="epanechnikov",
       stop ("The value of sparse.r is larger than the number of observations above or below the cutoff.")
 
     #smallest nn to use as an epsilon
-    neighbors <- kNN(as.matrix(unique(x)), 1)
+    neighbors <- dbscan::kNN(as.matrix(unique(x)), 1)
     epsilon <- min(neighbors$dist[,1])
 
     #gap on each side

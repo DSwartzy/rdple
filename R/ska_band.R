@@ -1,3 +1,14 @@
+#' Title
+#'
+#' @param y A numeric vector.
+#' @param x A numeric vector.
+#' @param c A number.
+#' @param kernel A character string.
+#'
+#' @return A number.
+#' @import stats
+#'
+
 ska_band <- function(y, x, c, kernel="epanechnikov") {
 
   #checking that the inputs are vectors
@@ -22,8 +33,8 @@ ska_band <- function(y, x, c, kernel="epanechnikov") {
   else if (n_below<3|n_above<3)
     stop("At least 3 values on both sides of the cutoff are necessary to calculate the bandwidth.")
 
-  if(kernel=="epanechnikov"){load(file="epaconst.RData")}
-  else if (kernel=="triangular"){load(file="triconst.RData")}
+  if(kernel=="epanechnikov"){kernelconst=epaconst}
+  else if (kernel=="triangular"){kernelconst=triconst}
   else stop("You have chosen an invalid kernel.")
 
   v.k <- kernelconst[29]

@@ -1,3 +1,11 @@
+#' Title
+#'
+#' @param x A numeric vector.
+#' @param c A number.
+#'
+#' @return A named numeric vector.
+#' @import stats
+
 diss <- function(x, c){
 
   #checking that the input is a vector
