@@ -1,10 +1,12 @@
 Package: rdple
-Title: What the Package Does (One Line, Title Case)
+Title: Partial Linear Estimation for Regression Discontinuity Designs
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Daryl", "Swartzentruber", email="daryl.swartzentruber@centre.edu", role=c("aut", "cre"), 
+    comment=c(ORCID="0000-0001-9605-2902"))
+Description: This packages provides a partial linear estimator for sharp regression discontinuity designs.
+    Includes a data-driven bandwidth algorithm and variance estimation based on the jackknife.
+    Also calculates a density inclusive study size. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
@@ -18,3 +20,5 @@ Imports:
 Depends: 
     R (>= 2.10)
 LazyData: true
+URL: https://github.com/DSwartzy/rdple
+BugReports: https://github.com/DSwartzy/rdple/issues
