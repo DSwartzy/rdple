@@ -1,15 +1,18 @@
-#' Title
+#' Partial linear estimator for regression discontinuity designs
 #'
-#' @param y A numeric vector.
-#' @param x A numeric vector.
-#' @param c A number.
-#' @param h A number or a character string.
-#' @param degree A number.
-#' @param kernel A character string.
-#' @param sparse.adj A character string.
-#' @param sparse.r A number.
+#' Implements the partial linear estimator for regression discontinuity designs.
+#' If a bandwidth is not provided, uses ska_band to calculate the Swartzentruber-KAizar bandwidth.
+#'
+#' @param y the response variable.
+#' @param x the running variable.
+#' @param c the cutoff.
+#' @param h the bandwidth to be used (if not provided, a bandwidth will be calculate using ska_band.
+#' @param degree the degree of the local polynomial weights (can be 0 or 1).
+#' @param kernel specifies the kernel function used for the local polynomial weights. Options are `epanechnikov` (default) or `triangular`.
+#' @param sparse.adj whether or not to use the sparsity adjustment for the SKA bandwidth, can be `FALSE` (default) or `TRUE`.
+#' @param sparse.r if `sparse.r = TRUE`, this is the positive number of points that are required to reach across the cutoff.
+#' @return A list containing the effect estimate, the standard error of the effect estimate, and the bandwidth.
 #' @export
-#' @return A list.
 #' @import stats
 #'
 rdple <- function(y, x, c, h="ska", degree=1, kernel="epanechnikov",

@@ -1,11 +1,13 @@
-#' Title
+#' Swartzentruber-KAizar bandwidth algorithm
 #'
-#' @param y A numeric vector.
-#' @param x A numeric vector.
-#' @param c A number.
-#' @param kernel A character string.
+#' Calculates the Swartzentruber-KAizar (SKA) bandwidth value for an RD design.
+#'
+#' @param y the response variable.
+#' @param x the running variable.
+#' @param c the cutoff.
+#' @param kernel specifies the kernel function used for the local polynomial weights. Options are `epanechnikov` (default) or `triangular`.
+#' @return The SKA bandwidth.
 #' @export
-#' @return A number.
 #' @import stats
 #'
 

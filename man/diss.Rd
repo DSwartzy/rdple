@@ -2,18 +2,24 @@
 % Please edit documentation in R/diss.R
 \name{diss}
 \alias{diss}
-\title{Title}
+\title{Density Inclusive Study Size (DISS) metric}
 \usage{
 diss(x, c)
 }
 \arguments{
-\item{x}{A numeric vector.}
+\item{x}{the running variable.}
 
-\item{c}{A number.}
+\item{c}{the cutoff.}
 }
 \value{
-A named numeric vector.
+a vector of the following values:
+\itemize{
+\item \code{m} is the number of observations within the \code{h.diss} bandwidth of the cutoff.
+\item \code{m.l} is the number of observations within the \code{h.diss} bandwidth below the cutoff.
+\item \code{m.r} is the number of observations within the \code{h.diss} bandwidth above the cutoff.
+\item \code{h.diss} is the rule of thumb bandwidth
+}
 }
 \description{
-Title
+Calculates the number of observations within a Silverman rule of thumb bandwidth of the cutoff.
 }

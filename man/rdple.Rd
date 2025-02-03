@@ -2,7 +2,7 @@
 % Please edit documentation in R/rdple.R
 \name{rdple}
 \alias{rdple}
-\title{Title}
+\title{Partial linear estimator for regression discontinuity designs}
 \usage{
 rdple(
   y,
@@ -16,25 +16,26 @@ rdple(
 )
 }
 \arguments{
-\item{y}{A numeric vector.}
+\item{y}{the response variable.}
 
-\item{x}{A numeric vector.}
+\item{x}{the running variable.}
 
-\item{c}{A number.}
+\item{c}{the cutoff.}
 
-\item{h}{A number or a character string.}
+\item{h}{the bandwidth to be used (if not provided, a bandwidth will be calculate using ska_band.}
 
-\item{degree}{A number.}
+\item{degree}{the degree of the local polynomial weights (can be 0 or 1).}
 
-\item{kernel}{A character string.}
+\item{kernel}{specifies the kernel function used for the local polynomial weights. Options are \code{epanechnikov} (default) or \code{triangular}.}
 
-\item{sparse.adj}{A character string.}
+\item{sparse.adj}{whether or not to use the sparsity adjustment for the SKA bandwidth, can be \code{FALSE} (default) or \code{TRUE}.}
 
-\item{sparse.r}{A number.}
+\item{sparse.r}{if \code{sparse.r = TRUE}, this is the positive number of points that are required to reach across the cutoff.}
 }
 \value{
-A list.
+A list containing the effect estimate, the standard error of the effect estimate, and the bandwidth.
 }
 \description{
-Title
+Implements the partial linear estimator for regression discontinuity designs.
+If a bandwidth is not provided, uses ska_band to calculate the Swartzentruber-KAizar bandwidth.
 }

@@ -5,14 +5,11 @@
 \alias{indiana_school_scores}
 \title{Indiana School Scores Data}
 \format{
-\subsection{\code{indiana_school_scores}}{
-
 A data frame with 1,933 rows and 2 columns:
 \describe{
 \item{score2017}{The school's overall points score in 2017}
 \item{score2018}{The school's overall points score in 2018}
 ...
-}
 }
 }
 \source{

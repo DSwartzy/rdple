@@ -1,9 +1,16 @@
-#' Title
+#' Density Inclusive Study Size (DISS) metric
 #'
-#' @param x A numeric vector.
-#' @param c A number.
+#' Calculates the number of observations within a Silverman rule of thumb bandwidth of the cutoff.
+#'
+#' @param x the running variable.
+#' @param c the cutoff.
+#' @return a vector of the following values:
+#'
+#' * `m` is the number of observations within the `h.diss` bandwidth of the cutoff.
+#' * `m.l` is the number of observations within the `h.diss` bandwidth below the cutoff.
+#' * `m.r` is the number of observations within the `h.diss` bandwidth above the cutoff.
+#' * `h.diss` is the rule of thumb bandwidth
 #' @export
-#' @return A named numeric vector.
 #' @import stats
 
 diss <- function(x, c){

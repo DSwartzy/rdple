@@ -2,22 +2,22 @@
 % Please edit documentation in R/ska_band.R
 \name{ska_band}
 \alias{ska_band}
-\title{Title}
+\title{Swartzentruber-KAizar bandwidth algorithm}
 \usage{
 ska_band(y, x, c, kernel = "epanechnikov")
 }
 \arguments{
-\item{y}{A numeric vector.}
+\item{y}{the response variable.}
 
-\item{x}{A numeric vector.}
+\item{x}{the running variable.}
 
-\item{c}{A number.}
+\item{c}{the cutoff.}
 
-\item{kernel}{A character string.}
+\item{kernel}{specifies the kernel function used for the local polynomial weights. Options are \code{epanechnikov} (default) or \code{triangular}.}
 }
 \value{
-A number.
+The SKA bandwidth.
 }
 \description{
-Title
+Calculates the Swartzentruber-KAizar (SKA) bandwidth value for an RD design.
 }
