@@ -2,7 +2,7 @@
 #'
 #' @param x A numeric vector.
 #' @param c A number.
-#'
+#' @export
 #' @return A named numeric vector.
 #' @import stats
 

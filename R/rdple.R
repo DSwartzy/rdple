@@ -8,7 +8,7 @@
 #' @param kernel A character string.
 #' @param sparse.adj A character string.
 #' @param sparse.r A number.
-#'
+#' @export
 #' @return A list.
 #' @import stats
 #'

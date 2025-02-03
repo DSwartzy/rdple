@@ -7,11 +7,10 @@ Authors@R:
 Description: This packages provides a partial linear estimator for sharp regression discontinuity designs.
     Includes a data-driven bandwidth algorithm and variance estimation based on the jackknife.
     Also calculates a density inclusive study size. 
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Imports: 
     dbscan,
     ks,

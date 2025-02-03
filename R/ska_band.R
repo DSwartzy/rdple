@@ -4,7 +4,7 @@
 #' @param x A numeric vector.
 #' @param c A number.
 #' @param kernel A character string.
-#'
+#' @export
 #' @return A number.
 #' @import stats
 #'
